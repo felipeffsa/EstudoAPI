@@ -7,8 +7,11 @@ from rest_framework import status
 from rest_framework.views import APIView
 from rest_framework.exceptions import NotFound
 from rest_framework import generics
+from rest_framework import viewsets
 
-
+class PessoaViewSet(viewsets.ModelViewSet):
+    queryset = Pessoa.objects.all()
+    serializer_class = PessoaSerializer
 
 class PessoaListAndCreate(generics.ListCreateAPIView):
     queryset = Pessoa.objects.all()
