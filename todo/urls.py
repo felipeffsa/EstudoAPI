@@ -1,7 +1,7 @@
-from django.urls import path
-from .views import pessoas_list,pessoa_detail_change_and_delete
+from todo.views import PessoaViewSet
+from rest_framework.routers import DefaultRouter
 
-urlpatterns = [
-    path('',pessoas_list),
-    path('<int:pk>/',pessoa_detail_change_and_delete),
-]
+router = DefaultRouter()
+router.register(r'', PessoaViewSet)
+urlpatterns = router.urls
+
