@@ -13,13 +13,4 @@ class PessoaViewSet(viewsets.ModelViewSet):
     queryset = Pessoa.objects.all()
     serializer_class = PessoaSerializer
 
-class PessoaListAndCreate(generics.ListCreateAPIView):
-    queryset = Pessoa.objects.all()
-    serializer_class = PessoaSerializer
-     
-        
-class PessoaDetailChangeAndDelete(generics.RetrieveUpdateDestroyAPIView):
-    queryset = Pessoa.objects.all()
-    serializer_class = PessoaSerializer
-
 
