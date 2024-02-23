@@ -1,7 +1,7 @@
 from django.urls import path
-from .views import pessoas_list,pessoa_detail_change_and_delete
+from .views import PessoaListAndCreate,PessoaDetailChangeAndDelete
 
 urlpatterns = [
-    path('',pessoas_list),
-    path('<int:pk>/',pessoa_detail_change_and_delete),
+    path('',PessoaListAndCreate.as_view()),
+    path('<int:pk>/',PessoaDetailChangeAndDelete.as_view()),
 ]
